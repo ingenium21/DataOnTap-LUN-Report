@@ -1,7 +1,7 @@
 # Need to set some variables first....
 [string]$dt1    = (Get-Date -Format 'yyyy/MM/dd HH:mm')
 [string]$un     = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name.ToLower()
-[string]$server = 'ETE1ABNFL01'
+[string]$server = #[NETAPP FILER NAME]
 [string]$report = 'LUN Geometry Report'
 # Vaguely based on 
 # https://community.spiceworks.com/scripts/show/2450-change-cell-color-in-html-table-with-powershell-set-cellcolor
@@ -105,9 +105,9 @@ Function Set-CellColour
 
 #############declaring variables#################################
 $emailFrom = "aspireadmin@eteraconsulting.com"
-$filerName = "ETE1ABNFL01"
-$emailTo = "support-asp1@mindshift.com","renato.regalado@mindshift.com","josh.quinn@mindshift.com","ksunderman@eteraconsulting.com"
-$smtpServer = "asp-submit.reflexion.net"
+$filerName = #[NETAPP FILER NAME]
+$emailTo = #[Email Addresses]
+$smtpServer = #[SMTP Server]
 $username = "root"
 $emailSubject = "Aspire Report - $filerName (NetApp LUN resize geometry)"
 $pwdTxt = get-content C:\scripts2\encryptedPasswords\root.txt #grabs content from encrypted Password File
