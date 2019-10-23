@@ -145,7 +145,7 @@ Aggregate = $Aggregate;
 
 write-host "converting results to HTML"
 
-[string[]]$html = $results | ConvertTo-Html -head $css -Body $body
+[string]$html = $results | ConvertTo-Html -head $css -Body $body
 # EXAMPLES
 write-host "changing cell colors"
 # Colour some  cells depending on the filters, filters can contain any valid forumla...
